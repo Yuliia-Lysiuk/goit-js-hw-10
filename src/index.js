@@ -2,8 +2,6 @@ import './css/styles.css';
 import debounce from 'lodash.debounce';
 import Notiflix from 'notiflix';
 import { fetchCountries } from "./fetchCountries";
-// import {renderCountry, renderListCountry} from "./renderCountry"
-
 
 const DEBOUNCE_DELAY = 300;
 
@@ -57,7 +55,7 @@ function renderCountry(countries) {
     const markup = countries
             .map(({ flags, name, capital, population, languages }) => {
                 return `<li class="item">
-                <img src="${flags.svg}" width="45"/>
+                <img src="${flags.svg}" width="45" alt="flag country"/>
                 <h1 class="title"> ${name.official}</h1>
                 <p class="text"><b>Capital</b>: ${capital}</p>
                 <p class="text"><b>Population</b>: ${population}</p>
